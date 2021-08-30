@@ -1,0 +1,670 @@
+/* ここから下に記載していく */
+
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul.header__nav {
+    display: flex;
+}
+
+ul.header__nav li {
+    margin-left: 40px;
+}
+
+.mainvisual{
+    height: 400px;
+
+    background: url("../img/mainbg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.maivisual__title{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.mainvisual__subtitle{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.about {
+    text-align: center;
+    margin: 50px 0;
+}
+
+h3.about__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: crimson;
+    margin-bottom: 20px;
+}
+
+p.about__subtitel {
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+
+
+p.about__text {
+    margin-bottom: 40px;
+    line-height: 1.8;
+
+}
+
+
+
+/* 画像4つ */
+.imgBox{
+display: flex;
+margin-top: 40px;
+margin-bottom: 50px;
+
+}
+
+.imgBox p{
+    width: 25%;
+}
+
+.imgBox p img{
+    width: 100%;
+}
+
+
+
+/* コースのところ新 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  img {
+    vertical-align: bottom;
+  }
+  .box {
+    display: flex;
+  }
+  .box > div {
+    width: 50%;
+  }
+  .text {
+    background-color: rgb(245, 245, 245);
+    padding: 2em;
+  }
+  .pict img {
+    width: 100%;
+    height: auto;
+  }
+  .boxcontainer .box:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .text__title{
+    width: 80%;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+  }
+  
+  .text__honbun{
+    width: 80%;
+    font-size: 16px;
+    margin-left: 50px;
+    line-height: 1.2;
+
+  }
+
+
+
+
+/* コースのところ */
+.Course{
+margin: 50px 0;
+}
+
+.Course__title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.Course__text{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+
+}
+
+
+ul.newsList {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+li.newsList__item {
+    width: 300px;
+}
+
+
+
+.Chishiki{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Chishiki__title{
+    width: 80%;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+}
+
+
+.Chishiki__text{
+    width: 80%;
+    font-size: 20px;
+    margin-left: 50px;
+ 
+}
+
+
+
+
+
+/* News テキスト */
+
+.News {
+    text-align: center;
+    margin: 50px 0;
+}
+
+
+h5.News__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(255, 214, 27, 0.856);
+    margin-bottom: 20px;
+}
+
+p.News__subtitel {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+.newsList__item-img {
+	border-bottom: 0.1875em solid #1B5E20;
+	background-color: #4CAF50;
+	color: #fff;
+	display: inline-block;
+	padding: 0.6em 2em;
+	margin: 0 0 1em;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+.newsList__item:hover {
+	border-bottom-color: transparent;
+	transform: translateY(0.1875em);
+}
+
+.nesList__item-day{
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+
+.nesList__item-text {
+    line-height: 1.8;  
+}
+
+
+
+/* more */
+
+section {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  a.btn_02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255, 214, 27, 0.856);
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding: 0 6% 0 12%;
+    color:white;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.2s;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+  a.btn_02:hover {
+    background: #d3d3d3;
+    color: #fff;
+  }
+  a.btn_02:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 8px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    margin-top: -7px;
+  }
+  a.btn_02:hover:before {
+    border-color: transparent transparent transparent #fff;
+  }
+
+
+
+  /* Access テキスト */
+
+.Access {
+    text-align: center;
+    margin: 50px 0;
+}
+
+h6.Access__title {
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 20px;
+}
+
+p.Access__subtitel {
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+
+/* gm埋め込み */
+
+.gm {
+    background-color: rgb(245, 245, 245);
+    padding: 30px;
+}
+
+.iframe-warp{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+table th {/*table内のthに対して*/
+    padding: 10px;/*上下左右10pxずつ*/
+  }
+  
+  table td {/*table内のtdに対して*/
+    padding: 12px 10px;/*上下3pxで左右10px*/
+  }
+
+
+/* 問合せフォーム */
+html {
+    overflow-y: scroll;
+  }
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0;
+  }
+  address,caption,cite,code,dfn,em,strong,th,var {
+    font-style: normal;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  caption,th {
+    text-align: left;
+  }
+  q:before,q:after {
+    content: '';
+  }
+  object,embed {
+    vertical-align: top;
+  }
+  hr,legend {
+    display: none;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+  }
+  img,abbr,acronym,fieldset {
+    border: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  sup {
+    vertical-align: super;
+    font-size: 0.5em;
+  }
+  img {
+    vertical-align: top;
+  }
+  i {
+    font-style: normal;
+  }
+  /*----リセットcss*----/
+  
+  /*デザインcss↓*/
+  .box_con {
+    max-width: 900px;
+    margin: 0  auto;
+  }
+  @media only screen and (max-width: 767px) {
+    .box_con {
+      width: 95%;
+    }
+  }
+  .box_con form {
+    width: 100%;
+  }
+  .box_con form table {
+    width: 100%;
+  }
+  .box_con form table tr {
+    position: relative;
+  }
+  .box_con form table tr:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: dotted #cdcdcd 1px;
+  }
+  .box_con form table tr th {
+    width: 30%;
+    font-weight: normal;
+    padding: 1em .5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  @media only screen and (max-width: 767px) {
+    .box_con form table tr th {
+      text-align: center;
+      width: 100%;
+      display: block;
+      background: #97ae88;
+      padding: .8em .2em;
+      color: #fff;
+    }
+  }
+  .box_con form table tr th span {
+    background: #cd6f55;
+    padding: 0 .3em;
+    color: #fff;
+    margin-left: .5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .box_con form table tr td {
+    padding: 1em .5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  @media only screen and (max-width: 767px) {
+    .box_con form table tr td {
+      padding: 1.5em .5em;
+      display: block;
+      width: 100%;
+    }
+  }
+  .box_con form table tr .box_br {
+    display: block;
+  }
+  .box_con form table tr select {
+    border: 1px solid #97ae88;
+  }
+  .box_con form table tr label input {
+    cursor: pointer;
+    display: none;
+    vertical-align: middle;
+  }
+  .box_con form table tr .radio02-input + label {
+    padding-left: 23px;
+    margin-right: 20px;
+    position: relative;
+  }
+  .box_con form table tr .radio02-input + label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .box_con form table tr .radio02-input:checked + label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background: #97ae88;
+    border-radius: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .box_con form table tr select, .box_con form table tr input, .box_con form table tr textarea {
+    width: 100%;
+    height: 3em;
+    padding: .5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .box_con form table tr textarea {
+    height: 10em;
+  }
+  
+  /*プライバシーのデザインcss↓*/
+  .con_pri {
+    max-width: 700px;
+    margin: 0  auto;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri {
+      width: 95%;
+    }
+  }
+  .con_pri .box_pri {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #cdcdcd;
+    background: #f7f7f7;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 20px 55px;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri .box_pri {
+      margin-top: 4%;
+      padding: 3%;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .con_pri .box_pri {
+      padding: 4%;
+    }
+  }
+  .con_pri .box_pri .box_tori {
+    text-align: left;
+    margin-top: 40px;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri .box_pri .box_tori {
+      margin-top: 4%;
+    }
+  }
+  .con_pri .box_pri .box_tori h4 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-size: 150%;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri .box_pri .box_tori h4 {
+      margin-bottom: 4%;
+    }
+  }
+  .con_pri .box_pri .box_tori .txt {
+    padding: 0 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri .box_pri .box_tori .txt {
+      padding: 0;
+    }
+  }
+  .con_pri .box_pri .box_num {
+    margin-top: 30px;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri .box_pri .box_num {
+      margin-top: 5%;
+    }
+  }
+  .con_pri .box_pri .box_num h4 {
+    font-weight: normal;
+    font-size: 113%;
+  }
+  .con_pri .box_pri .box_num .txt {
+    padding: 10px 0 0 20px;
+  }
+  @media only screen and (max-width: 767px) {
+    .con_pri .box_pri .box_num .txt {
+      padding: 3% 0 0 3%;
+    }
+  }
+  
+  .box_check {
+    text-align: center;
+    margin: 1em auto;
+  }
+  .box_check label {
+    display: inline-block;
+  }
+  .box_check label span {
+    margin-left: .3em;
+  }
+  
+
+/* 送信ボタン */
+
+.send {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 140px;
+  }
+  a.btn_02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255, 214, 27, 0.856);
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding: 0 6% 0 12%;
+    color:white;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.2s;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+  a.btn_02:hover {
+    background: #d3d3d3;
+    color: #fff;
+  }
+  a.btn_02:before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 8px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    margin-top: -7px;
+  }
+  a.btn_02:hover:before {
+    border-color: transparent transparent transparent #fff;
+  }
+
+
+  /* フッター */
+  .wrapper{
+    height: 100%;
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+
+footer {
+    margin-top: auto;
+    background-color: #707070;
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+    /* 背景色などは割愛します */
+}
+
