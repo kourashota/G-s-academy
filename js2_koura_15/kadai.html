@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOリスト</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+</head>
+
+<body>
+    
+<header>
+    <h1>TODOリスト</h1>
+</header>
+
+<main>
+    <input type="text" id="date">
+    <textarea id="text_area"></textarea>
+
+    <ul>
+        <li id="save">タスク登録</li>
+    </ul>
+
+
+    <input type="text" id="hyoji">
+
+    <ul>
+        <li id="road">日別タスクの表示</li>
+    </ul>
+
+    <input type="text" id="part_clear_text">
+
+    <ul>
+        <li id="part_clear">日別タスクの消去</li>
+    </ul>
+
+    <ul>
+        <li id="clear">全タスクの消去</li>
+    </ul>
+
+</main>
+
+
+
+<script>
+
+    // 1.saveクリックイベント
+
+    $("#save").on("click",function(){
+        var date = $("#date").val();
+        var main = $("#text_area").val();
+
+        if (date ==='' || main ===''){
+            alert ('入力されていません')
+            return; //returnはそれ以降の処理を止めるコマンド
+        }
+
+        localStorage.setItem(date,main);
+        alert("登録しました");
+        $("#date").val("");
+        $("#road").val("");
+        $("#text_area").val("");
+
+    });
+
+
+    // 2.表示クリックイベント
+    $("#road").on("click",function(){
+        var date_memory = $("#hyoji").val();
+     
+        var storage = localStorage.getItem(date_memory);
+        $("#text_area").val(storage)
+        $("#date").val(date_memory);
+        $("#hyoji").val("");
+    
+    });
+
+
+    // 3.日別消去クリックイベント
+    $("#part_clear").on("click",function(){
+        localStorage.clear();
+        var p_clear =  $("#part_clear_text").val();
+        localStorage.removeItem(p_clear);
+        $("#part_clear_text").val("");
+        $("#date").val("");
+        $("#road").val("");
+        $("#text_area").val("");
+        alert("対象日のタスクを消去しました");
+
+
+    });
+
+
+    // 4.全消去クリックイベント
+    $("#clear").on("click",function(){
+        localStorage.clear();
+        alert("全てのタスクを消去しました");
+
+    });
+
+</script>
+
+
+</body>
+</html>
