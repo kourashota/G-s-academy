@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<section>
+    <hi>じゃんけんゲーム</hi>
+    <p>以下から選んでください</p>
+
+</section>
+
+
+
+    <button id="guu">ぐー</button>
+    <button id="choki">ちょき</button>
+    <button id="paa">ぱー</button>
+
+    <p id="aite"></p>
+
+
+        <script>
+            const btn_guu = document.querySelector("#guu");
+            btn_guu.onclick = function(){
+                var omikuji = Math.floor( Math.random() *3);
+                let view = "";
+                if ( omikuji === 0) {
+                view ='<img src="img/guu.jpg" alt="">';
+                } else if ( omikuji === 1 ) {
+                view ='<img src="img/choki.jpg" alt="">';
+                } else if ( omikuji === 2 ) {
+                view ='<img src="img/paa.jpg" alt="">';}
+ 
+            const a = document.querySelector("#aite");
+            a.innerHTML = view
+                
+            }
+
+            const btn_choki = document.querySelector("#choki");
+            btn_choki.onclick = function(){
+                var omikuji = Math.floor( Math.random() *3);
+                let view = "";
+                if ( omikuji === 0) {
+                view ='<img src="img/guu.jpg" alt="">';
+                } else if ( omikuji === 1 ) {
+                view ='<img src="img/choki.jpg" alt="">';
+                } else if ( omikuji === 2 ) {
+                view ='<img src="img/paa.jpg" alt="">';}
+
+            const a = document.querySelector("#aite");
+            a.innerHTML = view
+
+            }
+
+            const btn_paa = document.querySelector("#paa");
+            btn_paa.onclick = function(e){
+                var omikuji = Math.floor( Math.random() *3);
+                let view = "";
+                if ( omikuji === 0) {
+                view ='<img src="img/guu.jpg" alt="">';
+                } else if ( omikuji === 1 ) {
+                view ='<img src="img/choki.jpg" alt="">';
+                } else if ( omikuji === 2 ) {
+                view ='<img src="img/paa.jpg" alt="">';}
+
+            const a = document.querySelector("#aite");
+            a.innerHTML = view
+
+            }
+            
+
+    </script>
+
+
+
+</body>
+</html>
