@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+
+
+/* 0.ヘッダー */
+h1 {
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+/* 1.表組パート */
+/* 1.1.テーブル */
+
+section table	{
+  width: 98%;
+}
+
+section th, section td	{
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+section th	{
+  background: #f4f4f4;
+}
+
+
+.demo03 th	{
+  width: 11%;
+  text-align: left;
+  font-size: 16px;
+  border-left :solid 5px #5badfa;
+  border-bottom: solid 1px gray;
+  padding: 10px;
+}
+
+
+.demo03 td	{
+  text-align: left;
+  font-size: 16px;
+}
+
+.familyname {
+  width: 150px;
+}
+
+.tel {
+  width: 120px;
+}
+
+.namber {
+  width: 60px;
+}
+
+.category {
+  width: 120px;
+}
+
+.child_info {
+  width: 120px;
+}
+
+.comment {
+  width: 280px;
+}
+
+.permission {
+  width: 40px;
+}
+
+.nouhinn {
+  width: auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+  table{
+    border: 1px solid #8dc3f5;
+  }
+  .demo03	{
+    margin: auto;
+}
+	.demo03 tr {
+		display:block;
+}
+	.demo03 th {
+		display:block;
+		width: auto;
+    margin: 10px;
+}
+	.demo03 td {
+		display: list-item;
+		width: 90%;
+		margin-left: 7%;
+}
+}
+
+
+/* 1.2.ステータス報告btn */
+input {
+  margin: 10px 3%;
+  width: 95%;
+  height: 40px;
+  font-size: 90%;
+}
+
+
+/* 1.3.納品URLbtn */
+ul {
+  padding: 0;
+  border-top: 1px solid #000000;
+  display: table; /* 定義 */
+  table-layout: fixed;
+  width: 96%;
+  font-size: 80%;
+  margin: 0 3%;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  border: 1px solid #666;
+  background-color: #fff;
+  display: table-cell; /* 定義 */
+  cursor: pointer;
+  color: #0d7dfd;
+}
+
+
+
+/* 2.申送りパート */
+.moshiokuri_title{
+  font-size: 16px;
+  padding-left: 20px;
+  font-weight: bold;
+  border-left :solid 5px #5badfa;
+  border-bottom: solid 1px gray;
+  padding: 10px;
+}
+
+
+.moshiokuri {
+  display:inline-flex;
+  width: 98%;
+}
+
+textarea {
+  margin: 10px 3%;
+  width: 85%;
+  height: 100px;
+  font-size: 120%;
+  background-color: rgb(241, 239, 239);
+}
+
+.moshiokuri_btn {
+  width: 15%;
+  height: 30px;
+  font-size: 95%;
+}
+
+

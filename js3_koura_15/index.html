@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>香盤表</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+</head>
+
+<body>
+
+
+
+<!-- 表組パート -->
+<h1 class="main_title">香盤表</h1>
+
+
+
+<section>
+    <h2 class="midashi"></h2>
+    <table class="demo03">
+        <tr>
+            <th>9:20～9:40 (20min)</th>
+            <td class="familyname">
+                宮崎恵未さま<br>
+                ミヤモトユイカさま
+            </td>
+            <td class="tel">090XXXXXXXX</td>
+            <td class="namber">1人（無理そうなら2人）</td>
+            <td class="category">#ファミリー#</td>
+            <td class="child_info">紬（つむぎ）1歳半 女の子</td>
+            <td class="comment">コロナのなか祖母、大祖母と会えずやっと会えるので 4人(子ども2人、祖母、大祖母)を中心に記念に撮って頂きたく思います。宜しくお願い致します。</td>
+            <td class="permission">可</td>
+            <td>
+                <details>
+                    <summary>ステータス</summary>
+                        <form method="post" action="sample.cgi">
+                            <input type="submit" value="完了">
+                            <input type="submit" value="キャンセル">
+                            <input type="submit" value="雨天中止">
+                        </form>
+                </details>
+            </td>
+            <td>
+                <details>
+                    <summary>納品URL</summary>
+                        <form method="post" action="sample.cgi">
+                            <input type="text" id="date">
+                            <div id="nouhin1"></div>
+                            <input type="submit" value="登録">
+                            <input type="submit" value="消去">
+                        </form>
+                </details>
+            </td>
+        </tr>
+        <tr>
+            <th>9:35～9:55 (20min)</th>
+            <td>宮本唯香さま<br>
+                フセチアキさま</td>
+            <td>090XXXXXXXX</td>
+            <td>４名</td>
+            <td>#ファミリー#</td>
+            <td>あおた6歳男 あかり４歳男</td>
+            <td>兄弟メインで撮影で、家族4人のも1枚欲しいです。</td>
+            <td>可</td>
+            <td>
+                <details>
+                    <summary>ステータス</summary>
+                        <form method="post" action="sample.cgi">
+                            <input type="submit" value="完了">
+                            <input type="submit" value="キャンセル">
+                            <input type="submit" value="雨天中止">
+                        </form>
+                </details>
+            </td>
+            <td>
+                <details>
+                    <summary>納品URL</summary>
+                        <form method="post" action="sample.cgi">
+                            <input type="text" id="date">
+                            <input type="submit" value="登録">
+                            <input type="submit" value="消去">
+                        </form>
+                </details>
+            </td>
+        </tr>
+        <tr>
+            <th>10:10～11:00 (50min)</th>
+            <td>青山理恵さま<br>
+                アオヤマリエさま</td>
+            <td>090XXXXXXXX</td>
+            <td>4人</td>
+            <td>#ファミリー#</td>
+            <td>結衣、小6、11歳、女。天馬、小１、7歳、男。元気、年中、5歳、男</td>
+            <td>子供達3人の写真がメインで、母である私も1、2枚写っていたらいいなと思います♪</td>
+            <td>不可</td>
+            <td>
+                <details>
+                    <summary>ステータス</summary>
+                        <form method="post" action="sample.cgi">
+                            <input type="submit" value="完了">
+                            <input type="submit" value="キャンセル">
+                            <input type="submit" value="雨天中止">
+                        </form>
+                </details>
+            </td>
+            <td>
+                <details>
+                    <summary>納品URL</summary>
+                        <form method="post" action="sample.cgi">
+                            <input type="text" id="date">
+                            <input type="submit" value="登録">
+                            <input type="submit" value="消去">
+                        </form>
+                </details>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!-- 申送りパート -->
+<section>
+    <p class="moshiokuri_title">
+        申し送り事項
+    </p>
+    <div class="moshiokuri">
+        <textarea id="text__area"></textarea>
+        <div class="moshiokuri_btn">
+            <input id="send_moushiokuri" type="submit" value="送信">
+            <input id="erase_moushiokuri" type="submit" value="消去">
+        </div>
+    </div>
+    <div id="output"></div>
+
+
+    <script>
+
+        // 1.saveクリックイベント
+
+        $("#save").on("click",function(){
+            var date = $("#date").val();
+            var main = $("#text_area").val();
+
+            if (date ==='' || main ===''){
+                alert ('入力されていません')
+                return; //returnはそれ以降の処理を止めるコマンド
+            }
+
+            localStorage.setItem(date,main);
+            alert("登録しました");
+            $("#date").val("");
+            $("#road").val("");
+            $("#text_area").val("");
+
+        });
+
+
+        // 2.表示クリックイベント
+        $("#road").on("click",function(){
+            var date_memory = $("#hyoji").val();
+
+            var storage = localStorage.getItem(date_memory);
+            $("#text_area").val(storage)
+            $("#date").val(date_memory);
+            $("#hyoji").val("");
+
+        });
+
+
+        // 3.日別消去クリックイベント
+        $("#part_clear").on("click",function(){
+            localStorage.clear();
+            var p_clear =  $("#part_clear_text").val();
+            localStorage.removeItem(p_clear);
+            $("#part_clear_text").val("");
+            $("#date").val("");
+            $("#road").val("");
+            $("#text_area").val("");
+            alert("対象日のタスクを消去しました");
+
+
+        });
+
+
+        // 4.全消去クリックイベント
+        $("#clear").on("click",function(){
+            localStorage.clear();
+            alert("全てのタスクを消去しました");
+
+        });
+
+
+    </script>
+</section>
+
+
+  <!--** 以下Firebase **-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAZACsrc_kuS4Ze0hsN1SWaVWOQpWHyQxQ",
+      authDomain: "dev21chat-1c304.firebaseapp.com",
+      databaseURL: "https://dev21chat-1c304-default-rtdb.firebaseio.com/",
+      projectId: "dev21chat-1c304",
+      storageBucket: "dev21chat-1c304.appspot.com",
+      messagingSenderId: "279793125309",
+      appId: "1:279793125309:web:7a1cdc541a9b77e60b34d4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    //firebaseのデーターベース（保存させる場所）を使いますよ
+    const newPostRef = firebase.database().ref();
+
+    // ここから下、jqueryの処理
+
+    // 申し送り送信ボタンをクリックされたら次の処理をする
+    $("#send_moushiokuri").on("click", function () { // データを登録で送る
+      newPostRef.push({
+        text: $("#text__area").val(), //テキストエリア
+      })
+      $("#text__area").val(""); //空にする
+    });
+
+    // 受信処理
+    newPostRef.on("child_added", function (data) {
+      let v = data.val(); //ここに保存されたデータが全て入ってくる
+      // let k = data.key; //今回は使いません
+
+      console.log(v); //vの変数に入っているオブジェクトを全てみる
+
+      let str = `<p>${v.username}<br>${v.text}</p>`;
+
+      // ここでデータをhtmlに埋め込むx
+      $("#output").prepend(str);
+    })
+
+    $("#text").on("keydown", function (e) {
+      console.log(e, "event");
+
+      // エンターキーを押したら送信処理を実行
+      if (e.keyCode === 13) {
+        newPostRef.push({
+          username: $("#username").val(), //名前
+          text: $("#text").val(), //テキストエリア
+        })
+        $("#text").val(""); //空にする
+        $("#username").val(""); //空にする
+      }
+    })
+
+      // 1組目の納品URLクリックされたら格納する処理
+      $("#register1").on("click", function () { // データを登録で送る
+      newPostRef.push({
+        text: $("#nouhin_url1").val(), //テキストエリア
+      })
+      $("#nouhin_url1").val(""); //空にする
+    });
+
+    // 受信処理
+    newPostRef.on("child_added", function (data) {
+      let v = data.val(); //ここに保存されたデータが全て入ってくる
+      // let k = data.key; //今回は使いません
+
+      console.log(v); //vの変数に入っているオブジェクトを全てみる
+
+      let str = `<p>${v.username}<br>${v.text}</p>`;
+
+      // ここでデータをhtmlに埋め込むx
+      $("XXX").prepend(str);
+    })
+
+
+  </script>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
